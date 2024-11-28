@@ -81,7 +81,6 @@ public class DataController {
                 .plusHours(currentLocation.getTravelTime().getHour())
                 .plusMinutes(currentLocation.getTravelTime().getMinute())
                 .plusSeconds(currentLocation.getTravelTime().getSecond());
-    }
 
 
 //    public void createRoute () {
