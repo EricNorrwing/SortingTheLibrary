@@ -1,10 +1,7 @@
 package org.example.Model;
 
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
@@ -14,6 +11,7 @@ import java.time.LocalTime;
 @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 @Accessors(chain = true)
 public class Route {
 

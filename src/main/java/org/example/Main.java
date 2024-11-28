@@ -20,19 +20,25 @@ Ni har helt fria tyglar med hur ni löser det här pusslet, ni väljer hur det s
 
 ##################################################################################### */
 
-import org.example.HackathonController.HackathonConfiguration;
-import org.example.Service.RouteService;
 
+import org.example.controller.DataController;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class Main {
 
 
-    public static void main(String[] args)  {
-        HackathonConfiguration hackathonConfiguration = new HackathonConfiguration();
-        RouteService routeService = new RouteService(hackathonConfiguration);
+    public static void main(String[] args) throws IOException {
+        DataController dc = new DataController();
+        dc.readData();
+        LocalDateTime deadline = LocalDateTime.parse("2024-09-03T23:59:00");
 
-        routeService.run();
+
+        //dc.getEndingLocation("Ecuador", deadline);
+        dc.trip("Sverige", "Ecuador");
+
+
     }
 
 }
